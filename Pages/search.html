@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="../node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
+    <link
+    rel="stylesheet"
+    href="../node_modules/@fortawesome/fontawesome-free/css/all.min.css"
+  />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="w-100 min-vh-100 bg-black">
+      <div class="container">
+        <div class="row">
+          <div class="col-2">
+            <div
+              class="side-nav-menu min-vh-100 position-fixed d-flex top-0"
+              style="left: 0px; width: 250px"
+            >
+              <div
+                class="nav-tab d-flex flex-column justify-content-between min-vh-100 p-4 d-none bg-black position-relative"
+                id="nav"
+              >
+                <div class="links">
+                  <ul class="list-unstyled overflow-hidden text-white">
+                    <li class="nav-item py-2 position-relative cursor-pointer">
+                      <a
+                        class="nav-link text-white"
+                        style="top: 0px"
+                        href="search.html"
+                        >Search</a
+                      >
+                    </li>
+                    <li class="nav-item py-2 position-relative cursor-pointer">
+                      <a
+                        class="nav-link text-white"
+                        style="top: 0px"
+                        href="ingerdient.html"
+                        >Ingredients</a
+                      >
+                    </li>
+                    <li class="nav-item py-2 position-relative cursor-pointer">
+                      <a
+                        class="nav-link text-white"
+                        style="top: 0px"
+                        href="area.html"
+                        >Area</a
+                      >
+                    </li>
+                    <li class="nav-item py-2 position-relative cursor-pointer">
+                      <a
+                        class="nav-link text-white"
+                        style="top: 0px"
+                        href="catogery.html"
+                        >Catogeries</a
+                      >
+                    </li>
+                    <li class="nav-item py-2 position-relative cursor-pointer">
+                      <a
+                        class="nav-link text-white"
+                        style="top: 0px"
+                        href="contact.html"
+                        >Contact Us</a
+                      >
+                    </li>
+                  </ul>
+                </div>
+                <div class="nav-footer">
+                  <div class="icons text-white">
+                    <i class="fa-brands fa-facebook"></i>
+                    <i class="fa-brands fa-twitter"></i>
+                    <i class="fa-solid fa-globe"></i>
+                  </div>
+                  <div class="footer text-white">
+                    <p>Copyright Â© 2022 All Rights <br />Reserved.</p>
+                  </div>
+                </div>
+              </div>
+              <div
+                class="nav-header d-flex flex-column justify-content-between py-4 text-center px-2 bg-white text-black position-relative z-3"
+              >
+                <img
+                  class=" "
+                  src="../images/logo.jpg"
+                  alt=""
+                  srcset=""
+                  style="width: 30px; height: 30px"
+                />
+                <i
+                  class="fa-solid open-close-icon fa-2x fa-x cursor-pointer d-none"
+                  onclick="closeNav()"
+                  id="icon"
+                ></i>
+                <button
+                  type="button"
+                  class="btn btn-info cursor-pointer"
+                  id="sidebarBtn"
+                  onclick="openNav()"
+                >
+                  <i class="fas fa-align-left"></i>
+                </button>
+                <div>
+                  <i class="fa-solid fa-globe d-block"></i>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-10 py-5">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <input
+                      type="text"
+                      class="form-control bg-transparent text-white"
+                      id="searchByName"
+                      placeholder="Search by Name"
+                      onkeyup=" getNameInputValue(this.value)"
+                    />
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <input
+                      type="text"
+                      class="form-control bg-transparent text-white"
+                      id="searchByFirstLetter"
+                      placeholder="Search by First Letter"
+                      onkeyup="getInputLetterValue(this.value)"
+                    />
+                  </div>
+                </div>
+                <div id="search"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script type="text/javascript" src="home.js"></script>
+  </body>
+</html>
